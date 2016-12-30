@@ -145,13 +145,12 @@ func initConfig() {
 }
 
 func main() {
-	initConfig()
-
-	stats()
+	Stats()
 
 }
 
-func stats() {
+func Stats() {
+	initConfig()
 	Interval := time.Duration(config.Interval) * time.Second
 	t := time.NewTicker(Interval)
 	for {
